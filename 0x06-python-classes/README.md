@@ -1,0 +1,1 @@
+Object oriented programming is a programming approach that models real world things as objects with attributes and methodes. (OOP) makes it easier to manage complexity as wellas build software in a structured and reusable way.
