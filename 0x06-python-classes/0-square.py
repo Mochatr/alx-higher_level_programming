@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 
 class Square:
-    """This class defines a a square."""
+    """
+    This class defines a square.
+    """
 
-    def __init__(self, side_length):
+    def __init__(self):
         """
-        Initializes a square with a given
-        side length.
-
-        Args:
-        side_length(int): the length of each side of the square.
+        Initializes an instance of the square
         """
-        self.side_length = side_length
+        pass
