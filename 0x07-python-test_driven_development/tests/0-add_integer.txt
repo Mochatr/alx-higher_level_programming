@@ -1,0 +1,37 @@
+# These are the test cases for the add_integer function
+
+# Test 1: Adding two positive integers.
+>>> add_integers(5, 5)
+10
+
+# Test 2: Adding a positive integer and a zero.
+>>> add_integers(10, 0)
+10
+
+# Test 3: Adding a negative integer and a positive integer.
+>>> add_integers(10, -10)
+0
+
+# Test 4: Adding two negative integers.
+>>> add_integers(-10, -10)
+-20
+
+# Test 5: Adding two float number.
+>>> add_integers(2.5, 2.5)
+5
+
+# Test 6: Adding an integer and a float.
+>>> add_integers(5, 2.5)
+7.5
+
+# Test 7: Adding an integer and a string
+>>> add_integers("10", 20)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or a float
+
+# Test 8: Adding two strings
+>>> add_integer("5", "20")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or a float
