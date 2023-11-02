@@ -9,12 +9,12 @@
 10
 
 # Test 3: Adding a negative integer and a positive integer.
->>> add_integers(10, -10)
-0
+>>> add_integers(10, -5)
+5
 
 # Test 4: Adding two negative integers.
->>> add_integers(-10, -10)
--20
+>>> add_integers(-10, -3)
+-13
 
 # Test 5: Adding two float number.
 >>> add_integers(2.5, 2.5)
