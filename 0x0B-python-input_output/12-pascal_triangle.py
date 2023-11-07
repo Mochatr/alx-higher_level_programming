@@ -2,7 +2,7 @@
 """Define a method"""
 
 
-def pascal_traingle(n):
+def pascal_triangle(n):
     """
     returns a list of integers representing
     the pascal's triangle of n
