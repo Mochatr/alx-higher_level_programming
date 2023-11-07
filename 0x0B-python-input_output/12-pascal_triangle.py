@@ -20,7 +20,7 @@ def pascal_triangle(n):
         newRow = [1]
 
         for y in range(1, x):
-            newValue = preRow[y - 1] + prevRow[y]
+            newValue = prevRow[y - 1] + prevRow[y]
             newRow.append(newValue)
 
         newRow.append(1)
