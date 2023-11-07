@@ -17,7 +17,7 @@ class Student:
         """
         try:
             for attribute in attrs:
-                if type(attr) is not str:
+                if type(attribute) is not str:
                     return self.__dict__
         except Exception:
             return self.__dict__
