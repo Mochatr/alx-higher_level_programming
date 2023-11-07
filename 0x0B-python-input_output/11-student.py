@@ -15,11 +15,10 @@ class Student:
         instance"""
         if attrs is None:
             return self.__dict__
-        else:
-            return {key: value for key, value in self.__dict__.items()
-                    if k in attrs}
+        return {attr: getattr(self, attr)
+                for attr in attrs if hasattr(self, atr)}
 
     def reload_from_json(self, json):
         """Replaces all the attributes of the student instance"""
         for key, value in json.items():
-            settar(self, key, value)
+            setattr(self, key, value)
