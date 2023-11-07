@@ -20,7 +20,7 @@ class Student:
 
         dictionary = {}
         for key, value in self.__dict__.items():
-            if key is attrs:
+            if key in attrs:
                 dictionary[key] = value
 
         return dictionary
