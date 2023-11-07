@@ -15,14 +15,12 @@ class Student:
         Retrieves a dictionary representation
         of a student instance
         """
-        try:
-            for attribute in attrs:
-                if type(attribute) is not str:
-                    return self.__dict__
-        except Exception:
+        if attrs is None:
             return self.__dict__
-        dictionary = dict()
+
+        dictionary = {}
         for key, value in self.__dict__.items():
             if key is attrs:
                 dictionary[key] = value
+
         return dictionary
