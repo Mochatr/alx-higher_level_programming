@@ -1,4 +1,4 @@
-0x0F. Python - Object-relational mapping
+0x0F. Python - Object-relational mapping.
 
 Background
 This project focuses on linking MySQL databases and Python code using the MySQLdb and SQLAlchemy libraries.
