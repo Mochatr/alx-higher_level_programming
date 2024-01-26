@@ -2,7 +2,7 @@
 
 """ Module """
 import urllib.request
-
+import sys
 
 def fetch_x_request_id():
     """
