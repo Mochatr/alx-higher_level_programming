@@ -4,7 +4,8 @@
 import urllib.request
 import sys
 
-def fetch_x_request_id():
+
+def fetch_x_request_id(url):
     """
     Sends a request to a URL and displays the value
     of the X-Request-Id variable found in the header of the response.
@@ -17,4 +18,7 @@ def fetch_x_request_id():
 
 
 if __name__ == "__main__":
-    fetch_x_request_id()
+    if len(sys.argv) == 2:
+        fetch_x_request_id(sys.argv[1])
+    else:
+        print("Usage: ./script.py <https://alx-intranet.hbtn.io>")
