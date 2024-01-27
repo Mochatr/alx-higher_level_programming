@@ -9,15 +9,7 @@ import requests
 import sys
 
 
-def sendpost_request(url, email):
-    """ Sends a POST request """
-    payload = {'email': email}
-    response = requests.post(url, data=payload)
-    print(response.text)
-
-
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        sendpost_request(sys.argv[1], sys.argv[2])
-    else:
-        print("Usage: ./6-post_email.py <http://0.0.0.0:5000/post_email> <hr@holbertonschool.com>")
+    url = sys.argv[1]
+    response = requests.get(url)
+    print(response.headers.get("X-Request-Id"))
