@@ -1,32 +1,23 @@
 #!/usr/bin/python3
 """
-This script takes in a URL
-sends a request to the URL
-and displays the body of the response.
+takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user 
+with the letter as a parameter.
 """
 
 import requests
 import sys
 
-
-def search_user(letter):
-    """
-    Sends a POST request
-    """
+if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    payload = {"q": letter}
-    response = requests.post(url, data=payload)
+    post_dictionary = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
+
+    response = requests.post(url, data=post_dictionary)
 
     try:
         json_response = response.json()
-        if json_response:
-            print("[{}] {}".format(json_response.get('id'), json_response.get("name")))
-        else:
+        if json_response = {}:
             print("No result")
+        else:
+            print("[{}] {}".format(json_response["id"], json_response["name"]))
     except ValueError:
         print("Not a valid JSON")
-
-
-if __name__ == "__main__":
-    letter = sys.argv[1] if len(sys.argv) > 1 else ""
-    search_user(letter)
