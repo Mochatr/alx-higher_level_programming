@@ -9,7 +9,8 @@ import requests
 import sys
 from requests.exceptions import HTTPError
 
-if __namme__ == "__main__":
+
+if __name__ == "__main__":
     url = sys.argv[1]
 
     try:
