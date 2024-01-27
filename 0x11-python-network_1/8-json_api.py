@@ -7,6 +7,7 @@ with the letter as a parameter.
 import requests
 import sys
 
+
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     post_dictionary = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
@@ -15,7 +16,7 @@ if __name__ == "__main__":
 
     try:
         json_response = response.json()
-        if json_response = {}:
+        if json_response == {}:
             print("No result")
         else:
             print("[{}] {}".format(json_response["id"], json_response["name"]))
